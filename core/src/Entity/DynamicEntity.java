@@ -9,11 +9,29 @@ import com.badlogic.gdx.physics.box2d.World;
 
 public abstract class DynamicEntity extends Entity
 {
+	public static final int NORTH = 1;
+	public static final int EAST = 2;
+	public static final int SOUTH = 3;
+	public static final int WEST = 4;
+	
+	protected float speed;
+	
 	@Override
 	public void act(float Delta)
 	{
 		super.setX(body.getPosition().x);
 		super.setY(body.getPosition().y);
+	}
+	
+	public void move(int direction)
+	{
+		body.
+	}
+	
+	public float setSpeed(float speed)
+	{
+		this.speed = speed;
+		return speed;
 	}
 
 	/**

@@ -14,7 +14,7 @@ import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
-public class Launcher implements ApplicationListener, InputProcessor
+public class Launcher implements ApplicationListener
 {
 	private Stage	stage;
 	private World	world;
@@ -24,7 +24,7 @@ public class Launcher implements ApplicationListener, InputProcessor
 	public void create()
 	{
 		stage = new Stage(new ExtendViewport(Gdx.graphics.getWidth(), Gdx.graphics.getHeight()));
-		world = new World(new Vector2(0, -98f), true);
+		world = new World(new Vector2(0, 0), true);
 
 		ConcreteWall walls[] = new ConcreteWall[20];
 		for (int i = 0; i < walls.length; i++)
@@ -77,60 +77,5 @@ public class Launcher implements ApplicationListener, InputProcessor
 	{
 		world.dispose();
 		stage.dispose();
-	}
-	
-	@Override
-	public boolean keyDown(int keycode)
-	{
-		return false;
-	}
-
-	@Override
-	public boolean keyUp(int keycode)
-	{
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean keyTyped(char character)
-	{
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean touchDown(int screenX, int screenY, int pointer, int button)
-	{
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean touchUp(int screenX, int screenY, int pointer, int button)
-	{
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean touchDragged(int screenX, int screenY, int pointer)
-	{
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean mouseMoved(int screenX, int screenY)
-	{
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean scrolled(int amount)
-	{
-		// TODO Auto-generated method stub
-		return false;
 	}
 }
