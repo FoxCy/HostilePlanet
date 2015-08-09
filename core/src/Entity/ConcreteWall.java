@@ -1,4 +1,4 @@
-package Entity;
+package entity;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
@@ -8,10 +8,6 @@ public class ConcreteWall extends StaticEntity
 {
 	public ConcreteWall()
 	{
-		texture = new Texture(Gdx.files.internal("data/Wall1 copy.gif"));
-		sprite = new Sprite(texture);
-		
-		setWidth(sprite.getWidth());
-		setHeight(sprite.getHeight());
+		super(new Sprite(new Texture(Gdx.files.internal("data/Wall1 copy.gif"))));
 	}
 }

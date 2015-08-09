@@ -5,21 +5,11 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.physics.box2d.World;
 
-public class BladeSphere extends DynamicEntity
+public class Rock extends DynamicEntity
 {
-	int state;
-	
-	public BladeSphere()
+	public Rock()
 	{
 		super(new Sprite(new Texture(Gdx.files.internal("data/BladeSphere.png"))));
-	}
-	
-	@Override
-	public void act(float delta)
-	{
-		super.act(delta);
-		
-		body.applyAngularImpulse(-200000, true);
 	}
 	
 	@Override
